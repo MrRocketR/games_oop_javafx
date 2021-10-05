@@ -40,11 +40,5 @@ public class LogicTest {
         logic.move(Cell.B1, Cell.D3);
     }
 
-    @Test(expected = ImpossibleMoveException.class)
-    public void whenImpossibleMoveException() throws OccupiedCellException, FigureNotFoundException {
-        Logic logic = new Logic();
-        BishopBlack bb = new BishopBlack(Cell.B1);
-        logic.add(bb);
-        logic.move(Cell.B1, Cell.D2);
-    }
+
 }
