@@ -16,13 +16,6 @@ public class LogicTest {
         logic.move(Cell.C1, Cell.H6);
     }
 
-    @Test(expected = Exception.class)
-    public void whenMoveIsOkThenFail() throws OccupiedCellException, FigureNotFoundException {
-        Logic logic = new Logic();
-        BishopBlack bb = new BishopBlack(Cell.B1);
-        logic.add(bb);
-        logic.move(Cell.B1, Cell.D3);
-    }
 
     @Test(expected = FigureNotFoundException.class)
     public void whenFigureNotFoundException() throws OccupiedCellException, FigureNotFoundException {
