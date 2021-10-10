@@ -25,10 +25,10 @@ public class BishopBlackTest {
 
     @Test
     public void whenC1G5() {
-        Cell [] testCells = {Cell.D2, Cell.E3, Cell.F4, Cell.G5};
+        Cell[] testCells = {Cell.D2, Cell.E3, Cell.F4, Cell.G5};
         BishopBlack bishopBlack1 = new BishopBlack(Cell.C1);
-        Cell [] actualCells = bishopBlack1.way(Cell.G5);
-        Assert.assertArrayEquals(actualCells,testCells);
+        Cell[] actualCells = bishopBlack1.way(Cell.G5);
+        Assert.assertArrayEquals(actualCells, testCells);
     }
 
     @Test(expected = ImpossibleMoveException.class)
