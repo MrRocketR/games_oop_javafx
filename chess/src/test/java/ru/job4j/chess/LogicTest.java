@@ -8,11 +8,11 @@ import ru.job4j.chess.firuges.black.BishopBlack;
 public class LogicTest {
 
     @Test(expected = FigureNotFoundException.class)
-    public void whenFigureNotFoundException() throws OccupiedCellException, FigureNotFoundException {
+    public void whenFigureNotFoundException() throws OccupiedCellException,
+            FigureNotFoundException {
         Logic logic = new Logic();
         logic.move(Cell.B1, Cell.D3);
     }
-
     @Test(expected = OccupiedCellException.class)
     public void whenOccupiedCellException() throws OccupiedCellException, FigureNotFoundException {
         Logic logic = new Logic();

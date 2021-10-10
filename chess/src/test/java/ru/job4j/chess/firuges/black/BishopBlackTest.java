@@ -10,7 +10,7 @@ import static org.junit.Assert.*;
 public class BishopBlackTest {
 
     @Test
-    public void whenPositionD8()  {
+    public void whenPositionD8() {
         BishopBlack bishopBlack1 = new BishopBlack(Cell.D8);
         boolean rsl = Cell.D8 == bishopBlack1.position();
         Assert.assertTrue(rsl);
@@ -22,8 +22,9 @@ public class BishopBlackTest {
         bishopBlack1.copy(Cell.E7);
         boolean rsl = Cell.E7 == bishopBlack1.position();
     }
+
     @Test
-    public void whenC1G5(){
+    public void whenC1G5() {
         Cell [] testCells = {Cell.D2, Cell.E3, Cell.F4, Cell.G5};
         BishopBlack bishopBlack1 = new BishopBlack(Cell.C1);
         Cell [] actualCells = bishopBlack1.way(Cell.G5);
@@ -31,7 +32,7 @@ public class BishopBlackTest {
     }
 
     @Test(expected = ImpossibleMoveException.class)
-    public void whenC1C5IsWrongWay(){
+    public void whenC1C5IsWrongWay() {
         BishopBlack bishopBlack1 = new BishopBlack(Cell.C1);
         bishopBlack1.way(Cell.C5);
 
